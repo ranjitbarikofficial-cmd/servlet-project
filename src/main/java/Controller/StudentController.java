@@ -18,16 +18,16 @@ public class StudentController extends HttpServlet {
         String address = req.getParameter("address");
         int age = Integer.parseInt(req.getParameter("age"));
 
-        // Print on console
+
         System.out.println("Name: " + name);
         System.out.println("Mail: " + mail);
         System.out.println("Address: " + address);
         System.out.println("Age: " + age);
 
-        // Create Student object
+
         Student student = new Student(name, mail, address, age);
 
-        // Send to DAO
+
         StudentDao dao = new StudentDao();
         dao.saveStudent(student);
 
